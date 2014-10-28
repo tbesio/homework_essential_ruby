@@ -64,9 +64,15 @@ end
 def variance(list_of_numbers)
   # Let's re-use the work we did above in the mean method
 
-  # ====================
-  # Your code goes here.
-  # ====================
+  list_of_numbers_dtm_2 = 0
+  list_of_numbers_mean = mean(list_of_numbers)
+
+  list_of_numbers.each do |number|
+    number_dist_to_mean = number - list_of_numbers_mean
+    list_of_numbers_dtm_2 += number_dist_to_mean**2
+  end
+  list_of_numbers_var = list_of_numbers_dtm_2 / (list_of_numbers.count.to_f - 1)
+  return list_of_numbers_var
 end
 
 # STANDARD DEVIATION
