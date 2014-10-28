@@ -45,9 +45,11 @@ end
 def mean(list_of_numbers)
   # Let's re-use the work we did above in the sum method
 
-  # ====================
-  # Your code goes here.
-  # ====================
+  sum = sum(list_of_numbers).to_f
+  count = list_of_numbers.length
+  mean = sum / count
+
+  return mean
 end
 
 # VARIANCE
